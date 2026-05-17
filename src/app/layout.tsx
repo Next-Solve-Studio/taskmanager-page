@@ -1,4 +1,5 @@
 import "./globals.css";
+import Header from "@/components/layout/header/Header";
 
 export const metadata = {
   title: "Task Manager || Gerenciamento de Atividades",
@@ -33,7 +34,7 @@ export const metadata = {
     siteName: "Task Manager",
     images: [
       {
-        url: "/og-image.jpg", 
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Task Manager",
@@ -52,6 +53,7 @@ export const metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="pt-BR" className={''}>
+      <Header />
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

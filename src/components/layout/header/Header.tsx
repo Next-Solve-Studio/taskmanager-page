@@ -1,0 +1,46 @@
+"use client"
+import { useEffect, useState } from "react"
+
+//importação de components
+import Logo from "./sections/Logo";
+import Navgation from "./sections/Navgation";
+import Buttons from "./sections/Buttons";
+import Sidebar from "./sections/Sidebar";
+
+export default function Header() {
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY > 20);
+        };
+
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, { passive: true });
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
+
+    return (
+        <header className={`fixed top-0 w-full h-20 z-50 transition-all duration-300 ${scrolled ? "bg-black/80 backdrop-blur-md shadow-lg" : "bg-transparent"}`}>
+            <section className="max-w-7xl mx-auto flex items-center justify-between h-full px-6 md:px-10 lg:px-16">
+
+                <div className="flex items-center gap-6">
+                    <Logo />
+
+                    <div className="hidden md:flex">
+                        <Navgation />
+                    </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                    <div className="hidden md:flex"><Buttons /></div>
+
+                    <div className="md:hidden"> <Sidebar /></div>
+                </div>
+            </section>
+        </header>
+    )
+}
