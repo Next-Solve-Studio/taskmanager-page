@@ -1,5 +1,6 @@
 import ContentInitial from "./Sections/ContentInitial"
 import ApresentationSistem from "./Sections/ApresentationSistem"
+import AboutHome from "./Sections/AboutHome"
 import StartSistem from "./CTAs/StartSistem"
 
 export default function HomeMain() {
@@ -7,6 +8,7 @@ export default function HomeMain() {
         <main className='w-full h-full flex flex-col overflow-hidden bg-(--bg-main)'>
             <ContentInitial />
             <ApresentationSistem />
+            <AboutHome />
             <StartSistem /> {/* CTA */}
         </main>
     )
