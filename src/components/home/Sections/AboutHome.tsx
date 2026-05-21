@@ -1,5 +1,4 @@
 "use client"
-
 import { useEffect } from "react"
 import { FiUsers, FiCalendar, FiPieChart } from "react-icons/fi"
 import AOS from "aos"
@@ -15,9 +14,10 @@ export default function AboutHome() {
     }, [])
 
     return (
-        <section className="bg-(--bg-main) text-(--text-primary) py-20 md:py-28 border-t border-(--border-main) relative overflow-hidden min-h-screen flex items-center">
+        <section className="flex flex-col items-center justify-center bg-(--bg-main) text-(--text-primary) py-20 md:py-28 border-t border-(--border-main) relative overflow-hidden min-h-screen">
 
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-100 h-100 bg-green/5 rounded-full blur-[120px] pointer-events-none" />
+           <div className="absolute top-1/2 right-0 -translate-y-1/2 w-100 h-100 bg-(--color-green)/5 rounded-full blur-[120px] pointer-events-none hidden lg:block" />
             <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
 
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
@@ -79,13 +79,9 @@ export default function AboutHome() {
                                     </p>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-
                 </div>
-
             </div>
         </section>
     )

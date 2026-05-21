@@ -54,7 +54,7 @@ const comments: ItemType[] = [
 
 export default function CommentsHome() {
     return (
-        <section className="w-full py-20 px-4 overflow-hidden bg-(--bg-main)">
+        <section className="w-full min-h-screen flex flex-col items-center justify-center py-20 px-4 overflow-hidden bg-(--bg-main)">
 
             <div className="max-w-2xl mx-auto text-center mb-14" data-aos="fade-up">
                 <span className="inline-block text-xs font-semibold tracking-widest uppercase text-(--color-green) mb-3 opacity-80">Recursos</span>
