@@ -59,30 +59,34 @@ export default function CommentsHome() {
             <div className="max-w-2xl mx-auto text-center mb-14" data-aos="fade-up">
                 <span className="inline-block text-xs font-semibold tracking-widest uppercase text-(--color-green) mb-3 opacity-80">Recursos</span>
 
-                <h2 className="text-3xl sm:text-4xl font-bold text-(--text-primary) leading-tight">
-                    Tudo que você precisa,{" "}
-                    <span className="text-(--color-green)">em um só lugar</span>
-                </h2>
+                <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-(--text-primary) leading-[1.15]">
+                    Tudo o que você precisa,{" "}
+                    <span className="text-transparent bg-clip-text bg-linear-to-r from-(--color-green) to-(--color-green-700)">
+                        em um só lugar
+                    </span>
+                </h1>
 
                 <p className="mt-4 text-(--text-secondary) text-base sm:text-lg">Ferramentas pensadas para simplificar sua rotina e impulsionar seus resultados.</p>
             </div>
 
-            <div className="max-w-6xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+            <div className="w-full max-w-6xl mx-auto px-2" data-aos="fade-up" data-aos-delay="100">
                 <Swiper
                     modules={[Autoplay]}
                     autoplay={{ delay: 2200, disableOnInteraction: false, pauseOnMouseEnter: true, }}
-                    pagination={{ clickable: true, dynamicBullets: true, }}
-                    loop
-                    grabCursor
-                    spaceBetween={24}
+                    loop={true}
+                    grabCursor={true}
+                    spaceBetween={20}
                     slidesPerView={1}
+                    autoHeight={false}
+                    className="items-stretch!"
                     breakpoints={{
-                        480: { slidesPerView: 1.3, spaceBetween: 16, },
-                        640: { slidesPerView: 2, spaceBetween: 20, },
-                        1024: { slidesPerView: 3, spaceBetween: 24, },
-                    }}>
+                        540: { slidesPerView: 1.2, spaceBetween: 16 },
+                        768: { slidesPerView: 2, spaceBetween: 20 },
+                        1024: { slidesPerView: 3, spaceBetween: 24 },
+                    }}
+                >
                     {comments.map((item) => (
-                        <SwiperSlide key={item.id} className="flex h-auto">
+                        <SwiperSlide key={item.id} className="h-auto! flex">
                             <FeatureCard item={item} />
                         </SwiperSlide>
                     ))}
@@ -96,25 +100,19 @@ function FeatureCard({ item, }: Readonly<{ item: ItemType }>) {
     const Icon = item.icon
 
     return (
-        <div className=" group relative flex flex-col w-full h-full min-h-67.5 rounded-2xl border border-(--border-main2) bg-(--bg-card) p-7 transition-all duration-300
-        hover:border-green/30 hover:bg-(--bg-surface) hover:-translate-y-1">
+        <div className="group relative flex flex-col w-full h-full rounded-2xl border border-(--border-main2) bg-(--bg-card) p-6 sm:p-7 transition-all duration-300 hover:border-green/30 hover:bg-(--bg-surface) hover:-translate-y-1 shadow-lg">
 
-            <div className=" pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_0%_0%,rgba(74,222,128,0.08)_0%,transparent_60%)]" />
+            <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[radial-gradient(circle_at_0%_0%,rgba(74,222,128,0.08)_0%,transparent_60%)]" />
 
-            <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-(--bg-surface) border border-(--border-main2) text-(--color-green) transition-all duration-300
-                group-hover:bg-green/10 group-hover:border-green/30">
+            <div className="w-12 h-12 mb-6 flex items-center justify-center rounded-xl bg-(--bg-surface) border border-(--border-main2) text-(--color-green) transition-all duration-300 group-hover:bg-green/10 group-hover:border-green/30">
                 <Icon size={20} />
             </div>
 
-            <div className="flex flex-col flex-1">
-                <h3 className="min-h-14 text-(--text-primary) font-semibold text-lg leading-snug">
-                    {item.title}
-                </h3>
-
-                <p className=" mt-3 flex-1 text-sm leading-relaxed text-(--text-secondary)">
-                    {item.text}
-                </p>
-
+            <div className="flex flex-col flex-1 justify-between">
+                <div>
+                    <h3 className="text-(--text-primary) font-semibold text-lg leading-snug">{item.title}</h3>
+                    <p className="mt-3 text-sm leading-relaxed text-(--text-secondary) font-light">{item.text}</p>
+                </div>
                 <div className="mt-6 h-px w-0 rounded-full bg-linear-to-r from-green/60 to-transparent transition-all duration-500 group-hover:w-full" />
             </div>
         </div>
