@@ -1,5 +1,6 @@
 import "./globals.css";
 import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footer/Footer";
 
 export const metadata = {
   title: "Task Manager || Gerenciamento de Atividades",
@@ -55,6 +56,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
     <html lang="pt-BR" className={''}>
       <Header />
       <body className="min-h-full flex flex-col">{children}</body>
+      <Footer />
     </html>
   );
 }
