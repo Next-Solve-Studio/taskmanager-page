@@ -3,6 +3,7 @@ import ApresentationSistem from "./Sections/ApresentationSistem"
 import AboutHome from "./Sections/AboutHome"
 import StartSistem from "./CTAs/StartSistem"
 import CommentsHome from "./Sections/CommentsHome"
+import BusinessCall from "./CTAs/BusinessCall"
 
 export default function HomeMain() {
     return (
@@ -12,6 +13,7 @@ export default function HomeMain() {
             <AboutHome />
             <StartSistem /> {/* CTA */}
             <CommentsHome /> 
+            <BusinessCall /> {/* CTA */} 
         </main>
     )
 }
