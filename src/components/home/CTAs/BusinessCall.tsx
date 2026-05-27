@@ -38,7 +38,7 @@ export default function BusinessCall() {
                     </div>
 
                     <div className="absolute -bottom-20 -right-20 w-64 h-64 bg-green/10 rounded-full blur-[80px] pointer-events-none" />
-                    <div className="absolute -top-20 -left-20 w-64 h-64 bg-(--color-green)/5 rounded-full blur-[80px] pointer-events-none" />
+                    <div className="absolute -top-20 -left-20 w-64 h-64 bg-green/5 rounded-full blur-[80px] pointer-events-none" />
                 </div>
             </div>
         </section>
