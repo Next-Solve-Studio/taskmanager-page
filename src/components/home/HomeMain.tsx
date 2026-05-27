@@ -1,9 +1,9 @@
-import ContentInitial from "./ContentInitial"
-import ApresentationSistem from "./ApresentationSistem"
-import AboutHome from "./AboutHome"
-import StartSistem from "./StartSistem"
-import CommentsHome from "./CommentsHome"
-import BusinessCall from "./BusinessCall"
+import ContentInitial from "./Sections/ContentInitial"
+import ApresentationSistem from "./Sections/ApresentationSistem"
+import AboutHome from "./Sections/AboutHome"
+import StartSistem from "./Sections/StartSistem"
+import CommentsHome from "./Sections/CommentsHome"
+import BusinessCall from "./Sections/BusinessCall"
 
 export default function HomeMain() {
     return (
