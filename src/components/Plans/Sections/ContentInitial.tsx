@@ -18,7 +18,7 @@ export default function ContentInitial() {
     }, [])
 
     return (
-        <section className="relative w-full bg-(--bg-main) pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden border-b border-(--border-main) flex flex-col items-center justify-center min-h-[70vh]">
+        <section className="relative w-full bg-(--bg-main) pt-32 pb-20 md:pt-40 md:pb-24 overflow-hidden border-b border-(--border-main) flex flex-col items-center justify-center min-h-screen">
 
             <div className="pointer-events-none absolute inset-0 opacity-[0.02]"
                 style={{
