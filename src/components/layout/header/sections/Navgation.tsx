@@ -20,7 +20,7 @@ export default function Navgation() {
         { id: 1, label: 'Home', href: '/' },
         { id: 2, label: 'Sistema', href: '#about' },
         { id: 3, label: 'Sobre Nós', href: '#projects' },
-        { id: 4, label: 'Preço', href: '#skills' },
+        { id: 4, label: 'Planos', href: '/Plans' },
         {
             id: 5, label: 'Recursos', href: '#trajectory', drop:
                 [
