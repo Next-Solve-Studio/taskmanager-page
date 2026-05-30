@@ -1,14 +1,10 @@
 "use client"
-import React, { useState, useEffect } from 'react'
+import { useEffect } from 'react'
 import { FiLayers, FiShield, FiZap } from 'react-icons/fi'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 export default function ContentInitial() {
-    // Estado para controlar a seleção do plano (Mensal ou Anual)
-    // Você poderá exportar ou usar esse estado para mudar os preços nos cards abaixo!
-    const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('yearly')
-
     useEffect(() => {
         AOS.init({
             duration: 1000,
@@ -52,27 +48,6 @@ export default function ContentInitial() {
                     data-aos="fade-up" data-aos-delay="200">
                     Preços transparentes, sem taxas ocultas. Altere ou cancele seu plano a qualquer momento com total flexibilidade.
                 </p>
-
-                <div className="mt-12 p-1.5 bg-(--bg-card) border border-(--border-main2) rounded-2xl flex items-center relative z-20 shadow-xl w-fit"
-                    data-aos="fade-up" data-aos-delay="300">
-
-                    <button type="button" onClick={() => setBillingCycle('monthly')}
-                        className={`relative z-10 px-6 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide transition-all duration-300 cursor-pointer ${billingCycle === 'monthly' ? 'text-black' : 'text-(--text-secondary) hover:text-(--text-primary)'}`}>
-                        Faturamento Mensal
-                    </button>
-
-                    <button type="button" onClick={() => setBillingCycle('yearly')}
-                        className={`relative z-10 px-6 py-2.5 rounded-xl text-xs md:text-sm font-bold tracking-wide transition-all duration-300 cursor-pointer flex items-center gap-2 ${billingCycle === 'yearly' ? 'text-black' : 'text-(--text-secondary) hover:text-(--text-primary)'}`}>
-                        Faturamento Anual
-                        <span className={`text-[10px] px-2 py-0.5 rounded-md font-extrabold tracking-normal transition-all ${billingCycle === 'yearly' ? 'bg-black/20 text-black' : 'bg-[var(--color-green)]/10 text-[var(--color-green)]'
-                            }`}>
-                            -20%
-                        </span>
-                    </button>
-
-                    <div className={`absolute top-1.5 bottom-1.5 left-1.5 bg-linear-to-r from-(--color-green) to-(--color-green-700) rounded-xl transition-all duration-300 ease-out pointer-events-none ${billingCycle === 'monthly' ? 'w-38.75 md:w-42.5 translate-x-0' : 'w-48.75 md:w-53.75 translate-x-38.75 md:translate-x-42.5'}`} />
-                </div>
-
                 <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-3xl opacity-60 text-xs md:text-sm text-(--text-secondary) font-light"
                     data-aos="fade-up" data-aos-delay="400">
                     <div className="flex items-center justify-center gap-2">
