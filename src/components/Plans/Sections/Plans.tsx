@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link";
 import { useEffect } from "react";
-import { FiCheckCircle, FiZap, FiTarget, FiActivity } from "react-icons/fi";
+import { FiCheckCircle, FiTarget, FiActivity } from "react-icons/fi";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -20,9 +20,9 @@ export default function Plans() {
         text: string;
         value: string;
         button: string;
-        highlight?: boolean; // Lógica para destacar o card central
-        icon: React.ElementType; // Ícone temático para cada plano
-        features: string[]; // Lista de recursos reais para cada plano
+        highlight?: boolean;
+        icon: React.ElementType;
+        features: string[];
     }
 
     const Cards: ItemType[] = [
@@ -46,7 +46,7 @@ export default function Plans() {
             text: 'Gestão completa, dashboards estratégicos e automação.',
             value: '79,90',
             button: 'Acessar Agora!',
-            highlight: true, // Destaque Visual Ativado
+            highlight: true,
             icon: FiTarget,
             features: [
                 'Colaboradores Ilimitados',
@@ -57,22 +57,6 @@ export default function Plans() {
                 '50 Projetos ativos'
             ]
         },
-        {
-            id: 3,
-            title: 'Plano Diamante',
-            text: 'Acesso total, API aberta e integrações personalizadas.',
-            value: '89,90',
-            button: 'Acessar Agora!',
-            icon: FiZap,
-            features: [
-                'Tudo do Plano Ouro',
-                'Acesso Full à API',
-                'Webhooks Ilimitados',
-                'Integrações via Zapier',
-                'Suporte VIP Dedicado',
-                'Projetos ativos Ilimitados',
-            ]
-        },
     ]
 
     return (
@@ -81,7 +65,7 @@ export default function Plans() {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-75 bg-(--color-green)/3 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-green/3 rounded-full blur-[100px] hidden lg:block pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full z-10 flex flex-col items-center">
+            <div className="relative max-w-7xl mx-auto px-6 md:px-10 lg:px-16 w-full z-10 flex flex-col items-center">
 
                 <div className="max-w-3xl text-center mb-16 md:mb-20" data-aos="fade-up">
                     <span className="inline-block text-xs font-semibold tracking-widest uppercase text-(--color-green) bg-(--bg-card) border border-(--border-main2) px-4 py-1.5 rounded-full mb-3 shadow-sm">
@@ -95,16 +79,16 @@ export default function Plans() {
                         Valores cobrados mensalmente. Sem contratos de fidelidade, cancele a qualquer momento.
                     </p>
                 </div>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch w-full">
+                \
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch w-full max-w-4xl mx-auto">
                     {Cards.map((item, index) => {
                         const Icon = item.icon;
                         const isHighlighted = item.highlight;
 
                         return (
-                            <div key={item.id} data-aos="fade-up" data-aos-delay={index * 150} className="flex">
+                            <div key={item.id} data-aos="fade-up" data-aos-delay={index * 150} className="flex w-full">
 
-                                <div className={`relative flex flex-col w-full h-full p-8 md:p-10 rounded-2xl border transition-all duration-300 hover:brightness-110 shadow-lg ${isHighlighted ? 'bg-(--bg-card) border-(--color-green) shadow-[0_12px_40px_rgba(74,222,128,0.08)] scale-[1.03] lg:scale-[1.05] z-10'
+                                <div className={`relative flex flex-col w-full h-full p-8 md:p-10 rounded-2xl border transition-all duration-300 hover:brightness-110 shadow-lg ${isHighlighted ? 'bg-(--bg-card) border-(--color-green) shadow-[0_12px_40px_rgba(74,222,128,0.08)] scale-[1.02] md:scale-[1.03] z-10'
                                     : 'bg-(--bg-card) border-(--border-main2) hover:bg-(--bg-surface) hover:border-(--border-main2)'}`}>
 
                                     {isHighlighted && (
@@ -112,7 +96,8 @@ export default function Plans() {
                                     )}
 
                                     <div className="flex flex-col gap-5 border-b border-(--border-main) pb-7 mb-7">
-                                        <div className={`flex items-center justify-center w-14 h-14 rounded-2xl ${isHighlighted ? 'bg-green/10 text-(--color-green) border border-(--color-green)/20' : 'bg-(--bg-surface) text-(--text-primary) border border-(--border-main2)'}`}>
+                                        <div className={`flex items-center justify-center w-14 h-14 rounded-2xl ${isHighlighted ? 'bg-green/10 text-(--color-green) border border-green/20' :
+                                            'bg-(--bg-surface) text-(--text-primary) border border-(--border-main2)'}`}>
                                             <Icon size={26} strokeWidth={1.5} />
                                         </div>
                                         <div>
