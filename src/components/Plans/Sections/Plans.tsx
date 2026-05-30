@@ -124,7 +124,7 @@ export default function Plans() {
                                     </div>
 
                                     <div className="mt-auto">
-                                        <Link href={`/plan/${item.id}`}
+                                        <Link href={`https://taskmanager.nextsolve.com.br/login${item.id}`}
                                             className={`block text-center w-full px-6 py-4 rounded-xl text-sm font-extrabold tracking-wide active:scale-[0.99] transition-all duration-300 ${isHighlighted
                                                 ? 'bg-linear-to-r from-(--color-green) to-(--color-green-700) text-black shadow-[0_6px_24px_rgba(74,222,128,0.15)] hover:shadow-[0_6px_32px_rgba(74,222,128,0.3)] hover:brightness-110'
                                                 : 'bg-white text-black hover:bg-(--text-primary)/90 shadow-[0_6px_20px_rgba(255,255,255,0.05)]'}`}>

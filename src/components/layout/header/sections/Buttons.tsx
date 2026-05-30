@@ -4,7 +4,7 @@ import { AiOutlineGlobal } from "react-icons/ai";
 
 export default function Buttons() {
     const btnLinks = [
-        { id: 1, text: "Contato", href: "/contact", primary: false },
+        { id: 1, text: "Contato", href: "/Contact", primary: false },
         { id: 2, text: "Planos", href: "/Plans", primary: true },
         { id: 3, text: "EN", href: "/", icon: AiOutlineGlobal },
     ];
