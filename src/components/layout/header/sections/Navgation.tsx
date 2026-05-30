@@ -20,14 +20,14 @@ export default function Navgation() {
         { id: 1, label: 'Home', href: '/' },
         { id: 2, label: 'Sistema', href: '#about' },
         { id: 3, label: 'Sobre Nós', href: '#projects' },
-        { id: 4, label: 'Planos', href: '/Plans' },
         {
-            id: 5, label: 'Recursos', href: '#trajectory', drop:
+            id: 4, label: 'Recursos', href: '#trajectory', /* drop:
                 [
+                // adicionar conteúdo futuramente!!
                     { id: 1, label: 'Sobre nossa Empresa', href: '/About' },
                     { id: 2, label: 'Politica de Privacidade', href: '/Politics' },
-                    { id: 3, label: 'Orçamento', href: '/budget' },
-                ]
+                    { id: 3, label: 'Redes Sociais', href: '/Social' },
+                ] */
         },
     ];
 
