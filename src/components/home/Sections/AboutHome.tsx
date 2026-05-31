@@ -14,7 +14,7 @@ export default function AboutHome() {
     }, [])
 
     return (
-        <section className="flex flex-col items-center justify-center bg-(--bg-main) text-(--text-primary) py-24 md:py-32 border-t border-(--border-main) relative overflow-hidden min-h-screen">
+        <section className="flex flex-col items-center justify-center bg-(--bg-main) text-(--text-primary) py-24 md:py-32 border-t border-(--border-main) relative overflow-hidden min-h-screen" id="about">
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-125 h-125 bg-green/4 rounded-full blur-[140px] pointer-events-none" />
             <div className="absolute top-1/2 right-0 -translate-y-1/2 w-125 h-125 bg-green/4 rounded-full blur-[140px] pointer-events-none hidden lg:block" />
 

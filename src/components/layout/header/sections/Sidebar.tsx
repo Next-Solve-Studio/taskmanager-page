@@ -62,17 +62,17 @@ export default function Sidebar() {
 
     const mainLinks = [
         { id: 1, label: 'Home', href: '/' },
-        { id: 2, label: 'Sistema', href: '#about' },
-        { id: 3, label: 'Sobre Nós', href: '#projects' },
-        { id: 4, label: 'Planos', href: '/Plans' },
+        { id: 2, label: 'Sistema', href: '#apresentation' },
+        { id: 3, label: 'Sobre Nós', href: '#about' },
+      /*   { id: 4, label: 'Planos', href: '/Plans' }, */
         {
-            id: 5,
+            id: 4,
             label: 'Recursos',
-            href: '#',
+            href: '#resources',
             drop: [
-                { id: 1, label: 'Sobre nossa Empresa', href: '/About' },
-                { id: 2, label: 'Politica de Privacidade', href: '/Politics' },
-                { id: 3, label: 'Orçamento', href: '/budget' },
+                { id: 1, label: 'Sobre nossa Empresa', href: '' },
+                { id: 2, label: 'Politica de Privacidade', href: '' },
+                { id: 3, label: 'Orçamento', href: '' },
             ]
         },
     ];
@@ -150,15 +150,15 @@ export default function Sidebar() {
 
                             <div className="px-4 pb-6 pt-4 border-t border-(--border-main) bg-(--bg-main)/40">
                                 <div className="space-y-2.5">
-                                    <Link href="/contact" onClick={closeMenu}
+                                    <Link href="/Contact" onClick={closeMenu}
                                         className="block text-center w-full px-4 py-3 rounded-xl text-sm font-semibold tracking-wide text-black bg-(--color-green) hover:bg-green/90 active:scale-[0.99] transition-all shadow-[0_4px_20px_rgba(74,222,128,0.15)]">
                                         Contato
                                     </Link>
 
                                     <div className="grid grid-cols-2 gap-2">
-                                        <Link href="/budget" onClick={closeMenu}
+                                        <Link href="/Plans" onClick={closeMenu}
                                             className="block text-center px-3 py-2.5 rounded-xl text-xs font-medium tracking-wide text-(--text-primary)/80 border border-(--border-main2) hover:bg-(--bg-surface) hover:text-(--text-primary) transition-all">
-                                            Orçamento
+                                            Planos
                                         </Link>
                                         <Link href="/en" onClick={closeMenu}
                                             className="block text-center px-3 py-2.5 rounded-xl text-xs font-medium tracking-wide text-(--text-primary)/80 border border-(--border-main2) hover:bg-(--bg-surface) hover:text-(--text-primary) transition-all">

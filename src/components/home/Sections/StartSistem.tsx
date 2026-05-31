@@ -11,7 +11,8 @@ const highlights = [
 
 export default function StartSistem() {
     return (
-        <section className="relative flex flex-col items-center justify-center bg-(--bg-main) text-(--text-primary) py-24 md:py-36 overflow-hidden border-t border-(--border-main)">
+        <section className="relative flex flex-col items-center justify-center bg-(--bg-main) text-(--text-primary) py-24 md:py-36 overflow-hidden border-t border-(--border-main)" 
+        id="resources">
     
             <div className="pointer-events-none absolute -top-32 -right-32 w-150 h-150 rounded-full bg-green/5 blur-[130px]" />
             <div className="pointer-events-none absolute -bottom-20 -left-20 w-100 h-100 bg-green/4 blur-[100px]" />

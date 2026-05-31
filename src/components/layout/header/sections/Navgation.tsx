@@ -18,10 +18,10 @@ export default function Navgation() {
 
     const links: ItemType[] = [
         { id: 1, label: 'Home', href: '/' },
-        { id: 2, label: 'Sistema', href: '#about' },
-        { id: 3, label: 'Sobre Nós', href: '#projects' },
+        { id: 2, label: 'Sistema', href: '#apresentation' },
+        { id: 3, label: 'Sobre Nós', href: '#about' },
         {
-            id: 4, label: 'Recursos', href: '#trajectory', /* drop:
+            id: 4, label: 'Recursos', href: '#resources', /* drop:
                 [
                 // adicionar conteúdo futuramente!!
                     { id: 1, label: 'Sobre nossa Empresa', href: '/About' },
