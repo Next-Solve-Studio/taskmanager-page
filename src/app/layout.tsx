@@ -24,7 +24,7 @@ export const metadata = {
   authors: [{ name: "Task Manager", url: "https://taskmanager.nextsolve.com.br/" }],
 
   icons: {
-    icon: "/", //Adicionar Favcon
+    icon: "/favicon.ico", 
   },
 
   openGraph: {

@@ -18,7 +18,6 @@ export default function Footer() {
         { id: 1, label: "Corporativo", href: "/" },
         { id: 2, label: "Contato", href: "/Contact  " },
         { id: 3, label: "Política de Privacidade", href: "/" },
-        { id: 4, label: "Agente de IA", href: "/" },
     ];
 
     const socialNetwork: SocialItem[] = [
