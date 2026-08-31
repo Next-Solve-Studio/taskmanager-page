@@ -1,6 +1,6 @@
 "use client"
 import Link from "next/link"
-// import Image from "next/image" // Criar Logo para substituir o titulo.
+import Image from "next/image" 
 
 export default function Logo() {
     return (
@@ -8,7 +8,14 @@ export default function Logo() {
             <Link href="/" className="group flex items-center gap-2.5 font-bold text-xl tracking-tight select-none transition-opacity hover:opacity-90">
 
                 <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-linear-to-br from-(--color-green) to-(--color-green-700) shadow-[0_0_15px_rgba(74,222,128,0.2)]">
-                    <span className="text-black text-sm font-black tracking-tighter">TM</span>
+                    <span className="text-black text-sm font-black tracking-tighter">
+                        <Image
+                            alt="image-log"
+                            width={100}
+                            height={100}
+                            src="/logo-taskmanager.png"
+                        />
+                    </span>
                 </div>
 
                 <h1 className="text-(--text-primary) transition-colors duration-300">
