@@ -71,8 +71,8 @@ export default function Sidebar() {
             href: '#resources',
             drop: [
                 { id: 1, label: 'Sobre nossa Empresa', href: '' },
-                { id: 2, label: 'Politica de Privacidade', href: '' },
-                { id: 3, label: 'Orçamento', href: '' },
+                { id: 2, label: 'Politica de Privacidade', href: '/PrivacyPolicy' },
+                { id: 3, label: 'Orçamento', href: 'https://taskmanager.nextsolve.com.br/login' },
             ]
         },
     ];
@@ -156,7 +156,7 @@ export default function Sidebar() {
                                     </Link>
 
                                     <div className="grid grid-cols-2 gap-2">
-                                        <Link href="/Plans" onClick={closeMenu}
+                                        <Link href="https://taskmanager.nextsolve.com.br/login" onClick={closeMenu}
                                             className="block text-center px-3 py-2.5 rounded-xl text-xs font-medium tracking-wide text-(--text-primary)/80 border border-(--border-main2) hover:bg-(--bg-surface) hover:text-(--text-primary) transition-all">
                                             Planos
                                         </Link>

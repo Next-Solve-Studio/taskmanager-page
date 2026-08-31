@@ -31,7 +31,7 @@ export default function BusinessCall() {
                     </p>
 
                     <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Link href="#register" className="group inline-flex items-center justify-center gap-2.5 bg-linear-to-r from-(--color-green) to-(--color-green-700) text-black font-extrabold text-base px-10 py-4 rounded-xl shadow-[0_8px_32px_rgba(74,222,128,0.25)] hover:shadow-[0_8px_40px_rgba(74,222,128,0.45)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 w-full sm:w-auto">
+                        <Link href="/https://taskmanager.nextsolve.com.br/login" className="group inline-flex items-center justify-center gap-2.5 bg-linear-to-r from-(--color-green) to-(--color-green-700) text-black font-extrabold text-base px-10 py-4 rounded-xl shadow-[0_8px_32px_rgba(74,222,128,0.25)] hover:shadow-[0_8px_40px_rgba(74,222,128,0.45)] hover:brightness-110 active:scale-[0.98] transition-all duration-300 w-full sm:w-auto">
                             Comece agora!
                             <FiArrowRight className="text-lg group-hover:translate-x-1.5 transition-transform duration-200" />
                         </Link>

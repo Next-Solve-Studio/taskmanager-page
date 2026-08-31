@@ -17,7 +17,7 @@ export default function Footer() {
     const institutional: LinkItem[] = [
         { id: 1, label: "Corporativo", href: "/" },
         { id: 2, label: "Contato", href: "/Contact  " },
-        { id: 3, label: "Política de Privacidade", href: "/" },
+        { id: 3, label: "Política de Privacidade", href: "/PrivacyPolicy" },
     ];
 
     const socialNetwork: SocialItem[] = [
